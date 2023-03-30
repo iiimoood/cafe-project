@@ -50,10 +50,15 @@
     </div>
     <script id="template-home-page" type="text/x-handlebars-template"></script>
 
-    <script
-      id="template-product-list"
-      type="text/x-handlebars-template"
-    ></script>
+    <script id="template-product-list" type="text/x-handlebars-template">
+      <article class='product'>
+        <h3 class='product_title'>{{title}}</h3>
+        <p class='product_description'>{{{description}}}</p>
+        <p class='product_roasting'>{{roasting}}</p>
+        <p class='product_intensity'>{{intensity}}</p>
+        <div class='product_image'>{{image}} </div>
+      </article>
+    </script>
 
     <script
       id="template-contact-page"
