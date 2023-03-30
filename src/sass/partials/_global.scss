@@ -1,0 +1,11 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#pages > section {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
