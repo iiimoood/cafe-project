@@ -12,7 +12,7 @@ class Product {
   }
   renderInMenu() {
     const thisProduct = this;
-    const generatedHTML = templates.menuProduct(thisProduct.data);
+    const generatedHTML = templates.product(thisProduct.data);
     thisProduct.elementOne = utils.createDOMFromHTML(generatedHTML);
     thisProduct.elementTwo = utils.createDOMFromHTML(generatedHTML);
 

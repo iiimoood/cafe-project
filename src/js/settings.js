@@ -8,7 +8,7 @@ export const select = {
   containerOf: {
     pages: '#pages',
     menu: '.product-list',
-  }
+  },
 };
 export const classNames = {
   nav: {
