@@ -5,16 +5,33 @@
   height: 650px;
   object-fit: cover;
 }
+.company-name {
+  font-weight: $font-black;
+  font-size: 40px;
+  letter-spacing: 6px;
+  margin-bottom: 0px;
+}
+
+.company-name-next {
+  font-weight: $font-bold;
+  font-size: 18px;
+  letter-spacing: 4px;
+  margin-top: 5px;
+}
 
 .page-title {
   color: $color-main;
-  font-size: 55px;
+  font-size: 80px;
+  letter-spacing: 13px;
+  text-align: left;
+  margin: 0 40px;
+  font-weight: $font-bold;
 }
 
 .page-title::after {
   position: absolute;
   content: '';
-  bottom: 50px;
+  bottom: 180px;
   left: 50%;
   width: 170px;
   height: 5px;
@@ -23,7 +40,13 @@
 }
 
 .page-subtitle {
-  margin-top: 250px;
+  margin-top: 150px;
+  letter-spacing: 3px;
+  font-weight: $font-normal;
+}
+
+.page-title-next {
+  text-align: right;
 }
 
 .splash {
@@ -36,11 +59,13 @@
   a {
     text-decoration: none;
     color: $color-light;
+    letter-spacing: 1px;
+    font-size: 20px;
   }
 
   li {
     display: inline;
-    margin-right: 10px;
+    margin-right: 25px;
   }
 }
 
@@ -55,6 +80,8 @@
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .icon-down-circled-1 {

@@ -17,8 +17,8 @@
       <div class="container navigation-text">
         <div class="row">
           <div class="col-5">
-            <h1>EL TIGRE</h1>
-            <h2>VENEZUELA COFFEE BEANS</h2>
+            <h1 class="company-name">EL TIGRE</h1>
+            <h2 class="company-name-next">VENEZUELA COFFEE BEANS</h2>
           </div>
           <div class="col-7">
             <ul class="main-nav">
@@ -30,7 +30,10 @@
         </div>
         <header class="splash">
           <div class="splash-inner">
-            <h1 class="page-title">HOME OF ORIGINAL TASTES</h1>
+            <h1 class="page-title">
+              HOME OF <br />
+              <div class="page-title-next">ORIGINAL TASTES</div>
+            </h1>
             <h2 class="page-subtitle">DISCOVER</h2>
             <i class="icon-down-circled-1"></i>
           </div>
@@ -40,10 +43,19 @@
     <div id="pages">
       <section id="home">
         <div class="home-page container">
-          <h1>Products</h1>
+          <h1 class="section-header">PRODUCTS</h1>
           <div class="product-list"></div>
           <div>
-            <h1>About</h1>
+            <h1 class="section-header">ABOUT US</h1>
+            <div>
+              Who are we? Just a bunch of friends with a love for a good coffee
+              and desire to create something new, something original.
+            </div>
+            <div>
+              Our coffee reflect us - young, wild and free. We are on the
+              journey of new tastes...
+            </div>
+            <div>Join us!</div>
           </div>
         </div>
       </section>
@@ -53,6 +65,7 @@
       <section id="contact">
         <div class="contact-wrapper container">
           <form>
+            <h1 class="section-header">CONTACT US</h1>
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" class="form-control" id="name" />
@@ -70,6 +83,7 @@
         </div>
       </section>
     </div>
+    <footer>2021 EL TIGRE inc.</footer>
 
     <script id="template-product" type="text/x-handlebars-template">
       <article class='product'>
@@ -82,6 +96,6 @@
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
-    <script src="js/app.js" type="module"></script>
+    <script type="module" src="js/app.js"></script>
   </body>
 </html>
