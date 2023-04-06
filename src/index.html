@@ -31,10 +31,30 @@
         </div>
         <header class="splash">
           <div class="splash-inner">
-            <h1 class="page-title">
-              HOME OF <br />
-              <div class="page-title-next">ORIGINAL TASTES</div>
-            </h1>
+            <div  class="page-title">
+              <script>
+                  Array.prototype.random = function(limit)
+                  {
+                    if (typeof limit == 'undefined' || limit < 0) limit = 1;
+                    else if (!limit) limit = this.length;
+                    for (var i = 0, source = this, target = new Array(), n = source.length; i < limit && n > 0; i++)
+                    {
+                      do { var index = Math.random(); } while (index == 1);
+                      index = Math.floor(index * n);
+                      target.push(source[index]);
+                      source[index] = source[--n];
+                    }
+                    return target;
+                  }
+                  
+                  document.write(new Array(              
+                  'HOME OF <br/> <div class="page-title-next">ORIGINAL TASTES</div>',
+                  'REAL VENEZUELA, <br/><div class="page-title-next">REAL COFFEE</div>',
+                  'TASTE REAL <br/><div class="page-title-next">VENEZUELA</div>'
+                  ).random().join(''));
+              </script>
+            </div>
+          
             <h2 class="page-subtitle">DISCOVER</h2>
             <i class="icon-down-circled-1"></i>
           </div>
@@ -46,27 +66,27 @@
         <div class="home-page container">
           <h1 class="section-header">PRODUCTS</h1>
           <div class="product-list"></div>
-          <div>
+          <div class="about">
             <h1 class="section-header">ABOUT US</h1>
             <div class='main-carousel' data-flickity='{ "autoPlay": 5000 }'>
               <div class='carousel-cell'>
                 <img src='images/1.png' alt='Ping Nihao' />
                 <div class='carousel-text'>
-                  <h1 class='employee-name'>Ping Nihao</h1>
+                  <h1 class='employee-name'>Ping <span class="surname">Nihao</span></h1>
                   <p class='employee-description'>Ping is the youngest in the team. He doesn't like calling coffee a mysterious act. He says, a good coffee is like a mathematical formula. Once you figured it out, every coffee you make is a masterpiece.</p>
                 </div>
               </div>
               <div class='carousel-cell'>
                 <img src='images/2.png' alt='Max Selfish' />
                 <div class='carousel-text'>
-                  <h1 class='employee-name'>Max Selfish</h1>
+                  <h1 class='employee-name'>Max <span class="surname">Selfish</span></h1>
                   <p class='employee-description'>Max is the austrian barista with years of experience from the hotels across the whole Europe. "Venezuela coffee was a lightening experience for me! I have never drink such an amazing coffee!", he says.</p>
                 </div>
               </div>
               <div class='carousel-cell'>
                 <img src='images/3.png' alt='Elizabeth Doherty' />
                 <div class='carousel-text'>
-                  <h1 class='employee-name'>Elizabeth Doherty</h1>
+                  <h1 class='employee-name'>Elizabeth <span class="surname">Doherty</span></h1>
                   <p class='employee-description'>Experienced barista from Bahamas. She says that Venezuela has opened her eyes on coffee. "It's not about a taste", she says. "It's all about the feelings".</p>
                 </div>
               </div>
@@ -74,25 +94,26 @@
           </div>
       </section>
       <section id="products">
+        <h1 class="section-header">PRODUCTS</h1>
         <div id="product-list" class="product-list container"></div>
       </section>
       <section id="contact">
         <div class="contact-wrapper container">
           <form>
             <h1 class="section-header">CONTACT US</h1>
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" class="form-control" id="name" />
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" />
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea class="form-control" id="message" rows="3"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+              <div class="form-group">
+                <label for="name">NAME</label>
+                <input type="text" class="form-control" id="name" />
+              </div>
+              <div class="form-group">
+                <label for="title">TITLE</label>
+                <input type="text" class="form-control" id="title" />
+              </div>
+              <div class="form-group">
+                <label for="message">MESSAGE</label>
+                <textarea class="form-control" id="message" rows="3"></textarea>
+              </div>
+            <button type="submit" class="btn btn-primary">SUBMIT</button>
           </form>
         </div>
       </section>
@@ -104,8 +125,8 @@
         <div class="product-text">
           <h3 class='product_title'>{{title}}</h3>
           <p class='product_description'>{{{description}}}</p>
-          <p class='product_roasting'>{{roasting}}</p>
-          <p class='product_intensity'>{{intensity}}</p>
+          <p class='product_roasting'>ROASTING: <span class="roasting-value">{{roasting}}</span></p>
+          <p class='product_intensity'>INTENSITY: <span class="intensity-value">{{intensity}}</span></p>
         </div>
         <div class='product_image'>{{{image}}} </div>
       </article>
