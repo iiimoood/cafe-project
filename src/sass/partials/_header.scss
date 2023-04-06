@@ -32,7 +32,7 @@
 .page-title::after {
   position: absolute;
   content: '';
-  bottom: 180px;
+  bottom: -50px;
   left: 50%;
   width: 170px;
   height: 5px;
@@ -76,7 +76,7 @@
   align-items: center;
 }
 
-.row {
+.navigation-intro {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

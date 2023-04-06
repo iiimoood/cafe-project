@@ -16,7 +16,7 @@
   <body>
     <nav class="navigation">
       <div class="container navigation-text">
-        <div class="row">
+        <div class="row navigation-intro">
           <div class="col-5">
             <h1 class="company-name">EL TIGRE</h1>
             <h2 class="company-name-next">VENEZUELA COFFEE BEANS</h2>
@@ -30,31 +30,32 @@
           </div>
         </div>
         <header class="splash">
-          <div class="splash-inner">
-            <div  class="page-title">
-              <script>
-                  Array.prototype.random = function(limit)
-                  {
-                    if (typeof limit == 'undefined' || limit < 0) limit = 1;
-                    else if (!limit) limit = this.length;
-                    for (var i = 0, source = this, target = new Array(), n = source.length; i < limit && n > 0; i++)
+          <div class="splash-inner container">
+            <div class="row"></div>
+              <div class="page-title">
+                <script>
+                    Array.prototype.random = function(limit)
                     {
-                      do { var index = Math.random(); } while (index == 1);
-                      index = Math.floor(index * n);
-                      target.push(source[index]);
-                      source[index] = source[--n];
+                      if (typeof limit == 'undefined' || limit < 0) limit = 1;
+                      else if (!limit) limit = this.length;
+                      for (var i = 0, source = this, target = new Array(), n = source.length; i < limit && n > 0; i++)
+                      {
+                        do { var index = Math.random(); } while (index == 1);
+                        index = Math.floor(index * n);
+                        target.push(source[index]);
+                        source[index] = source[--n];
+                      }
+                      return target;
                     }
-                    return target;
-                  }
-                  
-                  document.write(new Array(              
-                  'HOME OF <br/> <div class="page-title-next">ORIGINAL TASTES</div>',
-                  'REAL VENEZUELA, <br/><div class="page-title-next">REAL COFFEE</div>',
-                  'TASTE REAL <br/><div class="page-title-next">VENEZUELA</div>'
-                  ).random().join(''));
-              </script>
+                    
+                    document.write(new Array(              
+                    'HOME OF <br/> <div class="page-title-next">ORIGINAL TASTES</div>',
+                    'REAL VENEZUELA, <br/><div class="page-title-next">REAL COFFEE</div>',
+                    'TASTE REAL <br/><div class="page-title-next">VENEZUELA</div>'
+                    ).random().join(''));
+                </script>
+              </div>
             </div>
-          
             <h2 class="page-subtitle">DISCOVER</h2>
             <i class="icon-down-circled-1"></i>
           </div>
@@ -128,7 +129,10 @@
           <p class='product_roasting'>ROASTING: <span class="roasting-value">{{roasting}}</span></p>
           <p class='product_intensity'>INTENSITY: <span class="intensity-value">{{intensity}}</span></p>
         </div>
-        <div class='product_image'>{{{image}}} </div>
+        <div class='product_image'>{{{image}}} 
+          <div class="price"><span class="previous-price">{{previous-price}}</span><span class="current-price">{{current-price}}</span></div>
+          <div class="arrow"></div>
+        </div>
       </article>
     </script>
 

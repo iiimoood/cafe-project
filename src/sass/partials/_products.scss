@@ -8,6 +8,7 @@
 .product_image img {
   height: 250px;
   width: 350px;
+  box-shadow: 2px 2px 13px -1px rgb(7, 9, 24);
 }
 
 .product-text {
@@ -25,8 +26,20 @@
   letter-spacing: 1px;
 }
 
+.product_title::after {
+  position: absolute;
+  content: '';
+  bottom: -50px;
+  left: 30%;
+  width: 40px;
+  height: 5px;
+  transform: translateX(-50%);
+  background: $color-main;
+}
+
 .product_description {
   font-size: 13px;
+  padding-left: 150px;
 }
 
 .product_roasting {
@@ -45,4 +58,46 @@
 
 .intensity-value {
   color: $color-main;
+}
+
+.product_image {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  width: 0;
+  height: 0;
+  margin: 0 auto;
+  border-left: 100px solid transparent;
+  border-right: 120px solid $color-main;
+  border-bottom: 100px solid transparent;
+  z-index: 1;
+}
+.price {
+  position: absolute;
+  right: 0%;
+  top: 2%;
+  color: $color-light;
+  z-index: 2;
+  width: 78px;
+  height: 50px;
+}
+
+.previous-price {
+  margin-right: 15px;
+  text-decoration: line-through;
+  top: 0%;
+  left: 0%;
+  position: absolute;
+}
+
+.current-price {
+  font-size: 26px;
+  font-weight: $font-bold;
+  right: 3%;
+  bottom: 0%;
+  position: absolute;
 }

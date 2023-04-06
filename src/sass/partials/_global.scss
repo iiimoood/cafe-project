@@ -23,9 +23,9 @@ body {
 .section-header::after {
   position: absolute;
   content: '';
-  bottom: 10px;
+  bottom: -450px;
   left: 50%;
-  width: 300px;
+  width: 500px;
   height: 5px;
   transform: translateX(-50%);
   background: $color-main;
