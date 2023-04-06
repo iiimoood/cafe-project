@@ -47,11 +47,8 @@ const app = {
   },
   initMenu: function () {
     const thisApp = this;
-    for (let productData in thisApp.data.products) {
-      new Product(
-        thisApp.data.products[productData].id,
-        thisApp.data.products[productData]
-      );
+    for (let productData of thisApp.data.products) {
+      new Product(productData.id, productData);
     }
   },
   initData: function () {

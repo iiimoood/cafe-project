@@ -18,12 +18,13 @@ body {
   font-weight: $font-bold;
   text-align: center;
   margin-bottom: 100px;
+  position: relative;
 }
 
 .section-header::after {
   position: absolute;
   content: '';
-  bottom: -450px;
+  bottom: -50px;
   left: 50%;
   width: 500px;
   height: 5px;

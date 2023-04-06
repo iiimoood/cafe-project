@@ -27,6 +27,7 @@
   text-align: left;
   margin: 0 40px;
   font-weight: $font-bold;
+  position: relative;
 }
 
 .page-title::after {
@@ -85,6 +86,6 @@
   margin-right: 50px;
 }
 
-.icon-down-circled-1 {
+.icon-down-circled {
   font-size: 30px;
 }
