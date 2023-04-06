@@ -1,0 +1,22 @@
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-bottom: 50px;
+}
+
+.product_image img {
+  height: 250px;
+  width: 350px;
+  text-align: right;
+}
+
+.product-text {
+  height: 300px;
+  width: 400px;
+  margin-right: 50px;
+}
+
+.product-list {
+  margin: 0 100px;
+}

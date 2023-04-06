@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;0,900;1,600&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="vendor/flickity.min.css" media="screen" />
   </head>
   <body>
     <nav class="navigation">
@@ -47,17 +48,30 @@
           <div class="product-list"></div>
           <div>
             <h1 class="section-header">ABOUT US</h1>
-            <div>
-              Who are we? Just a bunch of friends with a love for a good coffee
-              and desire to create something new, something original.
+            <div class='main-carousel' data-flickity='{ "autoPlay": 5000 }'>
+              <div class='carousel-cell'>
+                <img src='images/1.png' alt='Ping Nihao' />
+                <div class='carousel-text'>
+                  <h1 class='employee-name'>Ping Nihao</h1>
+                  <p class='employee-description'>Ping is the youngest in the team. He doesn't like calling coffee a mysterious act. He says, a good coffee is like a mathematical formula. Once you figured it out, every coffee you make is a masterpiece.</p>
+                </div>
+              </div>
+              <div class='carousel-cell'>
+                <img src='images/2.png' alt='Max Selfish' />
+                <div class='carousel-text'>
+                  <h1 class='employee-name'>Max Selfish</h1>
+                  <p class='employee-description'>Max is the austrian barista with years of experience from the hotels across the whole Europe. "Venezuela coffee was a lightening experience for me! I have never drink such an amazing coffee!", he says.</p>
+                </div>
+              </div>
+              <div class='carousel-cell'>
+                <img src='images/3.png' alt='Elizabeth Doherty' />
+                <div class='carousel-text'>
+                  <h1 class='employee-name'>Elizabeth Doherty</h1>
+                  <p class='employee-description'>Experienced barista from Bahamas. She says that Venezuela has opened her eyes on coffee. "It's not about a taste", she says. "It's all about the feelings".</p>
+                </div>
+              </div>
             </div>
-            <div>
-              Our coffee reflect us - young, wild and free. We are on the
-              journey of new tastes...
-            </div>
-            <div>Join us!</div>
           </div>
-        </div>
       </section>
       <section id="products">
         <div id="product-list" class="product-list container"></div>
@@ -83,19 +97,22 @@
         </div>
       </section>
     </div>
-    <footer>2021 EL TIGRE inc.</footer>
+    <footer><i class="icon-copyright"></i> 2021 EL TIGRE inc.</footer>
 
     <script id="template-product" type="text/x-handlebars-template">
       <article class='product'>
-        <h3 class='product_title'>{{title}}</h3>
-        <p class='product_description'>{{{description}}}</p>
-        <p class='product_roasting'>{{roasting}}</p>
-        <p class='product_intensity'>{{intensity}}</p>
-        <div class='product_image'>{{image}} </div>
+        <div class="product-text">
+          <h3 class='product_title'>{{title}}</h3>
+          <p class='product_description'>{{{description}}}</p>
+          <p class='product_roasting'>{{roasting}}</p>
+          <p class='product_intensity'>{{intensity}}</p>
+        </div>
+        <div class='product_image'>{{{image}}} </div>
       </article>
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+    <script src="vendor/flickity.pkgd.min.js"></script>
     <script type="module" src="js/app.js"></script>
   </body>
 </html>
