@@ -2,17 +2,34 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-bottom: 50px;
   justify-content: space-between;
-  margin: 0 130px;
+  margin: 50px 130px;
+  position: relative;
 }
 .product:nth-of-type(2n) {
   flex-direction: row-reverse;
+  .most-popular {
+    display: none;
+  }
+}
+
+.product:nth-of-type(3n) {
+  .most-popular {
+    display: none;
+  }
+}
+
+.most-popular img {
+  height: 145px;
+  width: 205px;
+  position: absolute;
+  right: 50%;
+  top: 50%;
 }
 
 .product_image img {
-  height: 250px;
-  width: 350px;
+  height: 300px;
+  width: 380px;
   box-shadow: 2px 2px 13px -1px rgb(7, 9, 24);
 }
 

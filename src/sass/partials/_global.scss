@@ -31,3 +31,18 @@ body {
   transform: translateX(-50%);
   background: $color-main;
 }
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0px;
+  }
+  .main-nav a {
+    font-size: 10px;
+  }
+  .page-title {
+    font-size: 45px;
+  }
+  .product {
+    flex-direction: column;
+  }
+}
