@@ -1,6 +1,7 @@
 body {
   font-family: 'Source Sans Pro', sans-serif;
   width: 100%;
+  background-color: $color-light;
 }
 
 #pages > section {
@@ -33,22 +34,10 @@ body {
 }
 
 @media (max-width: 767px) {
-  .container {
-    padding: 0px;
+  .section-header::after {
+    width: 450px;
   }
-  .main-nav a {
-    font-size: 10px;
-  }
-  .page-title {
-    font-size: 45px;
-  }
-  .product {
-    flex-direction: column;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .page-title {
-    font-size: 45px;
+  .section-header {
+    padding-top: 15px;
   }
 }
